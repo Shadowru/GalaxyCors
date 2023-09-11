@@ -14,8 +14,8 @@ cors_proxy.createServer({
         key: fs.readFileSync('/etc/letsencrypt/live/' + host_name + '/privkey.pem'),
         cert: fs.readFileSync('/etc/letsencrypt/live/' + host_name + '/cert.pem'),
     },
-    originWhitelist: [], // Allow all origins
-    requireHeader: [],
+    originWhitelist: [host_name], // Allow all origins
+    requireHeader: ['origin'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, function() {
     console.log('Running CORS Anywhere on ' + host + ':' + port);
