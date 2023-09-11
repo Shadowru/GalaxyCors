@@ -11,8 +11,8 @@ const port = process.env.PORT || 8181;
 var cors_proxy = require('cors-anywhere');
 cors_proxy.createServer({
     httpsOptions: {
-        key: fs.readFileSync(path.join(__dirname, '/etc/letsencrypt/live/' + host_name + '/privkey.pem')),
-        cert: fs.readFileSync(path.join(__dirname, '/etc/letsencrypt/live/' + host_name + '/cert.pem')),
+        key: fs.readFileSync('/etc/letsencrypt/live/' + host_name + '/privkey.pem'),
+        cert: fs.readFileSync('/etc/letsencrypt/live/' + host_name + '/cert.pem'),
     },
     originWhitelist: [], // Allow all origins
     requireHeader: ['origin'],
