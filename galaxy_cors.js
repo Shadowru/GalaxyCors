@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+require('dotenv').config()
+
 const host_name = process.env.HUBS_HOST || 'galaxy.1936.moscow';
 
 // Listen on a specific host via the HOST environment variable
@@ -18,5 +20,5 @@ cors_proxy.createServer({
     requireHeader: ['origin'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, function() {
-    console.log('Running CORS Anywhere on ' + host + ':' + port);
+    console.log('Running CORS Anywhere on ' + host + ':' + port + '(' + host_name + ')');
 });
