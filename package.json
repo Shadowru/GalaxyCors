@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cors": "node galaxy_cors.js"
   },
   "author": "",
   "license": "ISC",
