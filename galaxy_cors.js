@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const host_name = process.env.HUBS_HOST || '1936.moscow';
+const host_name = process.env.HUBS_HOST || 'galaxy.1936.moscow';
 
 // Listen on a specific host via the HOST environment variable
 const host = process.env.HOST || '0.0.0.0';
