@@ -16,7 +16,7 @@ cors_proxy.createServer({
         key: fs.readFileSync('/etc/letsencrypt/live/' + host_name + '/privkey.pem'),
         cert: fs.readFileSync('/etc/letsencrypt/live/' + host_name + '/cert.pem'),
     },
-    originWhitelist: ['https://' + host_name],
+    originWhitelist: [],
     requireHeader: ['origin', 'referer'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, function() {
